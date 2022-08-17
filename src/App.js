@@ -1,6 +1,7 @@
 import './App.scss';
-import './assets/components/Header.js/Header.scss'
-import Header from './assets/components/Header.js/header';
+import './styles/partials/_mixins.scss'
+import './components/Header/Header.scss'
+import Header from './components/Header/header';
 
 function App() {
   return (

@@ -1,0 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+.header {
+    font-family:$fontReg;
+    &__logo {
+        width:34%;
+        padding:16px 33%;
+        @include tablet {
+            width:50%;
+        }
+    }
+    &__search-box {
+        height:36px;
+        width:240px;
+        font-family: $fontReg;
+    }
+    &__avatar {
+        border-radius:50%;
+        height:36px;
+        width:36px;
+    }
+}
