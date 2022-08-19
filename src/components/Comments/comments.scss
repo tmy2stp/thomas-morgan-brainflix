@@ -1,0 +1,221 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/colors' as *;
+
+.comment {
+    //display:flex;
+    flex:auto;
+    &__main {
+    @include mobile {
+        padding:0rem 1rem 0rem 1rem;
+    }
+    @include tablet {
+        padding:0rem 7.5rem 0rem 7.5rem;
+    }
+    @include desktop {
+            padding:0rem 20rem 0rem 20rem;
+        }
+    }
+    &__title {
+            @include mobile {
+                margin:1rem 1rem 1rem 1rem;
+                // padding:1.5rem 0rem 0rem 0rem;
+                font-size:1.5rem;
+                font-family:$fontBold;
+                font-weight:700;
+            }
+            @include tablet {
+                margin:2.25rem 2.25rem 2.25rem 2.25rem;
+                // padding:3rem 0rem 0rem 0rem;
+                @include tablet-desktop-section;
+            }
+            @include desktop {
+                margin:2.25rem 10rem 2.25rem 10rem;
+                // padding:3rem 0rem 0rem 0rem;
+                @include tablet-desktop-section;
+            }
+    }
+    &__form {
+        flex:1;
+        @include mobile {
+            padding-bottom:1rem;
+        }
+        @include tablet {
+            padding-bottom:1.5rem;
+        }
+    }
+    &__label {
+        @include mobile {
+            @include mobile-label;
+        }
+        @include tablet {
+            @include tablet-desktop-label;
+        }
+    }
+    &__button {
+        background-color: $bfBlack;
+        color:$white;
+        border:none;
+        height:40px;
+        border-radius:4px;
+        font-family:$fontReg;
+        font-size:18px;
+        @include mobile {
+            width:100%;
+        }
+        @include tablet {
+            width:35%;
+            float:right;
+        }
+    }
+    &__button:hover {
+        background-color: $black;
+    }
+    &__name {
+        font-family:$fontReg;
+        background-color:$alabaster;
+        border:1px solid $mercury;
+        @include mobile {
+        height:2.25rem;
+        border-radius:.25rem;
+        width:100%;
+        padding:.75rem;
+        margin-bottom:1rem;
+        font-size:.875rem;
+    }
+        @include tablet {
+            height:3rem;
+            border-radius:.25rem;
+            border-color:$mercury;
+            width:100%;
+            padding:.75rem;
+            margin-bottom:1rem;
+            font-size:.875rem;
+        }
+    }
+    &__textentry {
+        font-family:$fontReg;
+        background-color:$alabaster;
+        @include mobile {
+        height:150px;
+        border-radius:.25rem;
+        border-color:$mercury;
+        width:100%;
+        padding:.75rem;
+        margin-bottom:1rem;
+        font-size:.875rem;
+    }
+        @include tablet {
+            height:9.375rem;
+        border-radius:.25rem;
+        border-color:$mercury;
+        width:100%;
+        padding:.75rem;
+        margin-bottom:1rem;
+        font-size:.875rem;
+        }
+    }
+    &__add {
+        display:flex;
+        flex:1;
+        border-bottom:.0625rem solid $mercury;
+    }
+    &__avatar {
+        @include mobile {
+            padding-right:1rem;
+        }
+        @include tablet {
+            padding-right:1rem;
+        }
+        &__img {
+        @include mobile {
+            border-radius: 50%;
+            height:2.25rem;
+            width:2.25rem;
+        }
+        @include tablet {
+            border-radius:50%;
+            height:3rem;
+            width:3rem;
+        }
+    }
+    &--entered {
+        @include mobile {
+        padding:0px 1rem;
+        width:2.25rem;
+        height:2.25rem;
+        background-color:$mercury;
+        border-radius:50%;
+        }
+        @include tablet {
+            padding:0px 1rem;
+            width:3rem;
+            height:3rem;
+            background-color:$mercury;
+            border-radius:50%;
+        }
+    }
+    &--container {
+        padding-right:1rem;
+    }
+    }
+    
+    &__metadata {
+        display:flex;
+        flex:1;
+        flex-wrap:wrap;
+    }
+
+    &__container {
+        display:flex;
+        flex-wrap:wrap;
+        border-bottom:1px solid $mercury;
+        margin-bottom:1rem;
+    }
+    &__author {
+        @include mobile {
+            @include mobile-subheader;
+            font-family: $fontReg;
+            width:50%;
+            padding-bottom:1rem;
+        }
+        @include tablet {
+            @include tablet-desktop-subheader;
+            font-family: $fontReg;
+            width:50%;
+            padding-bottom:1rem;
+        }
+    }
+    &__date {
+        @include mobile {
+            @include mobile-subheader;
+            width:50%;
+            text-align:right;
+            color:$silver;
+            font-weight:400;
+        }
+        @include tablet {
+            @include tablet-desktop-subheader;
+            width:50%;
+            text-align:right;
+            color:$silver;
+            font-weight:400 !important;
+            font-family:$fontReg !important;
+        }
+    }
+    &__text {
+        @include mobile {
+            width:100%;
+            @include mobile-subheader;
+            font-weight:400;
+            padding-bottom:1rem;
+        }
+        @include tablet {
+            width:100%;
+            @include tablet-desktop-subheader;
+            font-family:$fontReg !important;
+            font-weight:400 !important;
+            padding-bottom:1rem;
+        }
+    }
+}
