@@ -1,0 +1,43 @@
+@use '../../styles/partials/colors' as *;
+
+.meta {
+    &__title {
+        width:90%;
+        margin:auto;
+        font-size:36px;
+        padding:24px 0px;
+        text-align:left;
+    }
+    &__divider {
+        width:100%;
+        margin:auto;
+        height:2px;
+        background-color: $mercury;
+        margin:0px auto 24px auto;
+    }
+    &__container {
+        width:90%;
+        margin:auto;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    &__item {
+        width:50%;
+        text-align:left;
+        padding:0px 0px 24px 0px;
+        color:$silver;
+    }
+    &__item-title {
+        width:50%;
+        text-align:left;
+        padding:0px 0px 24px 0px;
+        font-weight:700;
+    }
+    &__item-value {
+        padding:0px 0px 0px 16px;
+        color:$silver;
+    }
+    &__description {
+        text-align:left;
+    }
+}

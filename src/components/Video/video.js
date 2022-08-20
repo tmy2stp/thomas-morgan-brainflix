@@ -2,9 +2,11 @@ import './video.scss';
 
 function Video (props) {
     return (
-        <video controls poster={props.setVideo.image} className='video__player'>
+        <div class="video__container">
+            <video controls poster={props.setVideo.image} className='video__player'>
 
-        </video>
+            </video>
+        </div>
     )
 }
 
