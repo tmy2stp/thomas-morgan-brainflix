@@ -28,7 +28,7 @@ function comments(props) {
             <div class="comment__add">
                 <div class="comment__avatar"><img class="comment__avatar__img" src={avatar} alt="" /></div>
                 <div class="comment__form">
-                    <form id="comment__form">
+                    <form id="comment__form" className='comment__form-entry'>
                         <textarea class="comment__textentry" type="text" id="comment__textbox" name="comment__textbox"
                             placeholder="Add a new comment"></textarea>
                         <button class="comment__button">

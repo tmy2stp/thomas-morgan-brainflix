@@ -8,17 +8,17 @@ function formatDate(date) {
 
 function VideoMetadata (props) {
     return (
-        <section>
+        <section className='meta__all-data'>
         <h3 className='meta__title'>{props.setVideo.title}</h3>
         <div className='meta__container'>
-        <div className='meta__divider'></div>
+        <div className='meta__divider mobile-only'></div>
             <span className='meta__item-title'>By {props.setVideo.channel}</span>
-            <div className='meta__item'>
+            <div className='meta__views meta__item'>
                 <img src={views} alt="" />
                 <span className='meta__item-value'>{props.setVideo.views}</span>
             </div>
-            <span className='meta__item'>{formatDate(new Date(props.setVideo.timestamp))}</span>
-            <div className='meta__item'>
+            <span className='meta__item meta__date'>{formatDate(new Date(props.setVideo.timestamp))}</span>
+            <div className='meta__item meta__likes'>
                 <img src={likes} alt="" />
                 <span className='meta__item-value'>{props.setVideo.likes}</span>
             </div>

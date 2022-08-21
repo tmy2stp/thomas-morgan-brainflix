@@ -1,9 +1,21 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
 .video {
     &__container {
         width: 100%;
         padding-top: 56.25%;
         height: 0px;
         position: relative;
+        @include tablet {
+            width:90%;
+            padding-top:50.625%;
+            margin:auto;
+        }
+        &-tablet {
+            width:100%;
+            background-color:$black;
+        }
     }
     &__player {
         width: 100%;

@@ -9,12 +9,7 @@
         display:flex;
         flex-wrap:wrap;
         text-align:left;
-    @include mobile {
-        padding:0rem 1rem 0rem 1rem;
-    }
-    @include tablet {
-        padding:0rem 7.5rem 0rem 7.5rem;
-    }
+        padding:0rem 5% 0rem 5%;
     @include desktop {
             padding:0rem 20rem 0rem 20rem;
         }
@@ -29,30 +24,36 @@
         color:$silver;
         padding:24px 0 0 0;
             @include mobile {
-                // margin:1rem 1rem 1rem 1rem;
-                // padding:1.5rem 0rem 0rem 0rem;
                 font-size:12px;
                 font-family:$fontBold;
                 font-weight:700;
             }
             @include tablet {
-                margin:2.25rem 2.25rem 2.25rem 2.25rem;
-                // padding:3rem 0rem 0rem 0rem;
-                @include tablet-desktop-section;
+                font-size:12px;
+                font-family:$fontBold;
+                font-weight: 700;
+                margin-left:10%;
             }
             @include desktop {
                 margin:2.25rem 10rem 2.25rem 10rem;
-                // padding:3rem 0rem 0rem 0rem;
                 @include tablet-desktop-section;
             }
     }
     &__form {
-        flex:1;
         @include mobile {
             padding-bottom:1rem;
+            flex:1;
         }
         @include tablet {
             padding-bottom:1.5rem;
+            width:100%;
+        }
+        &-entry {
+            @include tablet {
+                width:100%;
+                display:flex;
+                justify-content: space-between;
+            }
         }
     }
     &__label {
@@ -81,8 +82,8 @@
             width:100%;
         }
         @include tablet {
-            width:35%;
-            float:right;
+             width:35%;
+        //     float:right;
         }
     }
     &__button:hover {
@@ -123,15 +124,17 @@
         font-size:.875rem;
         resize:none;
     }
-        @include tablet {
-            height:9.375rem;
-        border-radius:.25rem;
+    
+    @include tablet {
+        width:60%;
+        resize:none;
+        height:40px;
+        align-items: center;
+        border-radius:0.25rem;
         border-color:$mercury;
-        width:100%;
-        padding:.75rem;
-        margin-bottom:1rem;
-        font-size:.875rem;
-        }
+        padding:0 0 0 15px;
+        line-height:40px;
+    }
     }
     &__add {
         display:flex;
@@ -143,7 +146,7 @@
             width:15%;
         }
         @include tablet {
-            padding-right:1rem;
+            width:10%;
         }
         &__img {
         @include mobile {
@@ -165,7 +168,7 @@
         border-radius:50%;
         }
         @include tablet {
-            padding:0px 1rem;
+            //padding:0px 1rem;
             width:3rem;
             height:3rem;
             background-color:$mercury;
@@ -175,6 +178,9 @@
     &--container {
         // padding-right:1rem;
         width:15%;
+        @include tablet {
+            width:10%;
+        }
     }
     }
     
@@ -213,12 +219,12 @@
             font-weight:400;
         }
         @include tablet {
-            @include tablet-desktop-subheader;
             width:50%;
             text-align:right;
             color:$silver;
-            font-weight:400 !important;
-            font-family:$fontReg !important;
+            font-weight:400;
+            font-family:$fontReg;
+            font-size:1.5rem;
         }
     }
     &__text {

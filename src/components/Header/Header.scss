@@ -10,11 +10,18 @@
     margin:auto;
     gap:2%;
     justify-content: space-between;
+    @include tablet {
+        align-items:center;
+    }
     &__logo {
-        width:34%;
+        @include mobile {
+            width:34%;
+        }
         padding:16px 33%;
         @include tablet {
-            width:50%;
+            padding:24px 0;
+            order:1;
+            height:32px;
         }
     }
     &__search-box {
@@ -30,6 +37,11 @@
         width:87%;
         border:1px solid $mercury;
         border-radius:4px;
+        @include tablet {
+            width:25%;
+            order:2;
+            height:40px;
+        }
     }
     &__search-button {
         background: transparent;
@@ -45,6 +57,11 @@
         border-radius:50%;
         height:36px;
         width:36px;
+        @include tablet {
+            height:40px;
+            width:40px;
+            order:4;
+        }
     }
     &__upload-btn {
         width:100%;
@@ -58,6 +75,10 @@
         border:none;
         border-radius:4px;
         color:$white;
+        @include tablet {
+            order:3;
+            width:25%;
+        }
     }
     &__upload-btn-icon {
         position:absolute;
