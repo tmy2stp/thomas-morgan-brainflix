@@ -1,0 +1,63 @@
+@use './breakpoints' as *;
+@use './typography' as *;
+@use './colors' as *;
+
+// Variables
+@mixin mobile {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin tablet-desktop-section {
+    @media (min-width: $breakpoint-tablet) {
+        font-size:2.25rem;
+        line-height:2.75rem;
+        font-weight:700;
+        font-family:$fontBold;
+    }
+}
+
+@mixin tablet-desktop-subheader {
+    @media (min-width: $breakpoint-tablet) {
+        font-size:1.5rem;
+        line-height:2rem;
+        font-weight:700;
+        font-family:$fontBold;
+    }
+}
+
+@mixin tablet-desktop-label {
+    @media (min-width:$breakpoint-tablet) {
+        font-size:12px;
+        line-height:20px;
+        font-weight:700;
+        font-family:$fontBold;
+        color:#AFAFAF;
+    }
+}
+
+@mixin mobile-label {
+    font-size:10px;
+    line-height: 20px;
+    font-weight:700;
+    color:#AFAFAF;
+}
+
+@mixin mobile-subheader {
+    font-size:18px;
+    line-height:22px;
+    font-weight:600;
+}

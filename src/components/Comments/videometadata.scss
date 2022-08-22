@@ -1,0 +1,95 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.mobile-only {
+    @include tablet {
+        display:none;
+    }
+}
+
+.meta {
+    &__all-data {
+        @include desktop {
+            width:100%;
+            order:3;
+        }
+    }
+    &__views {
+        @include tablet {
+            order:3;
+            width:35%;
+            text-align:right;
+        }
+    }
+    &__date {
+        @include tablet {
+            order:2;
+            width:35%;
+            text-align:left;
+        }
+    }
+    &__likes {
+        @include tablet {
+            order:4;
+            width:15%;
+            text-align:right;
+        }
+    }
+    &__title {
+        width:90%;
+        margin:auto;
+        font-size:36px;
+        padding:24px 0px;
+        text-align:left;
+    }
+    &__divider {
+        width:100%;
+        margin:auto;
+        height:2px;
+        background-color: $mercury;
+        margin:0px auto 24px auto;
+        @include tablet {
+            order:5;
+        }
+        @include desktop {
+            margin:none;
+        }
+    }
+    &__container {
+        width:90%;
+        margin:auto;
+        display:flex;
+        flex-wrap:wrap;
+        @include desktop {
+            
+        }
+    }
+    &__item {
+        @include mobile {
+            width:50%;
+            text-align:left;
+        }
+        padding:0px 0px 24px 0px;
+        color:$silver;
+    }
+    &__item-title {
+        width:50%;
+        text-align:left;
+        padding:0px 0px 24px 0px;
+        font-weight:700;
+        @include tablet {
+            order:1;
+            width:15%;
+        }
+    }
+    &__item-value {
+        padding:0px 0px 0px 16px;
+        color:$silver;
+    }
+    &__description {
+        text-align:left;
+        @include tablet {
+            order:5;
+        }
+    }
+}
