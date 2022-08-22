@@ -1,5 +1,5 @@
-import './comments.scss';
-import './videometadata.scss';
+import './Comments.scss';
+import './Videometadata.scss';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import commentBtn from '../../assets/icons/add_comment.svg';
 import views from '../../assets/icons/views.svg';
@@ -11,11 +11,11 @@ function formatDate(date) {
 
 function comments(props) {
     let commentSection = props.setComments.comments.map((element, i) =>
-        <div className='comment__container'>
+        <div key={element.id} className='comment__container'>
             <div className='comment__avatar--container'>
                 <div className='comment__avatar--entered'></div>
             </div>
-            <div className='comment__metadata'>
+            <div  className='comment__metadata'>
                 <div className='comment__author'>{element.name}</div>
                 <div className='comment__date'>{formatDate(new Date(element.timestamp))}</div>
                 <div className='comment__text'>{element.comment}</div>
@@ -23,7 +23,7 @@ function comments(props) {
         </div>
     );
     return (
-        <section class='comment__all'>
+        <section className='comment__all'>
             <section className='meta__all-data'>
                 <h3 className='meta__title'>{props.setComments.title}</h3>
                 <div className='meta__container'>
@@ -43,17 +43,17 @@ function comments(props) {
                 </div>
 
             </section>
-            <section class="comment">
-                <div class="comment__main">
-                    <h2 class="comment__number-of-comments">{props.setComments.comments.length} Comments</h2>
-                    <h2 class="comment__title">Join the Conversation</h2>
-                    <div class="comment__add">
-                        <div class="comment__avatar"><img class="comment__avatar__img" src={avatar} alt="" /></div>
-                        <div class="comment__form">
+            <section className="comment">
+                <div className="comment__main">
+                    <h2 className="comment__number-of-comments">{props.setComments.comments.length} Comments</h2>
+                    <h2 className="comment__title">Join the Conversation</h2>
+                    <div className="comment__add">
+                        <div className="comment__avatar"><img className="comment__avatar__img" src={avatar} alt="" /></div>
+                        <div className="comment__form">
                             <form id="comment__form" className='comment__form-entry'>
-                                <textarea class="comment__textentry" type="text" id="comment__textbox" name="comment__textbox"
+                                <textarea className="comment__textentry" type="text" id="comment__textbox" name="comment__textbox"
                                     placeholder="Add a new comment"></textarea>
-                                <button class="comment__button">
+                                <button className="comment__button">
                                     <img src={commentBtn} alt="" className="comment__comment-btn-icon" />COMMENT
                                 </button>
                             </form>

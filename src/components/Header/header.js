@@ -10,7 +10,7 @@ const Header = () => {
         <header className="header">
                 <img src={logo} alt="" className="header__logo" />
                 <form className='header__form'>
-                    <button type="submit" class="header__search-button">
+                    <button type="submit" className="header__search-button">
                         <img src={search} alt="" />
                     </button>
                     <input type="text" id="searchText" name="searchText" placeholder='Search' className="header__search-box" />

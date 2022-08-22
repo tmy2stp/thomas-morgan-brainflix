@@ -1,11 +1,11 @@
 import './App.scss';
 import './styles/partials/_mixins.scss'
 import './components/Header/Header.scss'
-import Header from './components/Header/header';
-import Video from './components/Video/video'
+import Header from './components/Header/Header';
+import Video from './components/Video/Video'
 import {useState} from 'react';
-import Comments from './components/Comments/comments';
-import OtherVideos from './components/OtherVideos/othervideos';
+import Comments from './components/Comments/Comments';
+import OtherVideos from './components/OtherVideos/Othervideos';
 
 let videoData = require('./data/video-details.json');
 

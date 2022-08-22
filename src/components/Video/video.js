@@ -1,9 +1,9 @@
-import './video.scss';
+import './Video.scss';
 
 function Video (props) {
     return (
-        <div class="video__container-tablet">
-        <div class="video__container">
+        <div className="video__container-tablet">
+        <div className="video__container">
             <video controls poster={props.setVideo.image} className='video__player'>
 
             </video>
