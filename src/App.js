@@ -5,7 +5,6 @@ import Header from './components/Header/header';
 import Video from './components/Video/video'
 import {useState} from 'react';
 import Comments from './components/Comments/comments';
-import VideoMetadata from './components/VideoMetadata/videometadata';
 import OtherVideos from './components/OtherVideos/othervideos';
 
 let videoData = require('./data/video-details.json');
@@ -18,7 +17,6 @@ function App() {
         <Header />
         <Video setVideo={data} />
         <div className="metadata__desktop-only">
-        <VideoMetadata setVideo={data} />
         
         <Comments setComments={data} />
         <OtherVideos otherVideoData={[data, allData, setData]} />

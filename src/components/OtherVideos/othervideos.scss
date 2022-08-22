@@ -7,9 +7,10 @@
     @include desktop {
         width:27%;
         display:inline-block;
-        order:4;
+        order:5;
         padding-left:2.8%;
         border-left:2px solid $mercury;
+        margin-top:0px;
     }
     margin:auto;
     display:flex;
