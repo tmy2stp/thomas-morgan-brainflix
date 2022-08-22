@@ -20,7 +20,7 @@
         &-tablet {
             width:100%;
             background-color:$black;
-            @include tablet {
+            @include desktop {
                 order:2;
             }
         }
