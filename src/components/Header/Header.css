@@ -1,0 +1,76 @@
+@font-face {
+  font-family: AvenirBold;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: AvenirReg;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"), url("../../assets/fonts/AvenirNextLTPro.ttf");
+  font-weight: 400;
+}
+.header {
+  font-family: "AvenirReg";
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  gap: 2%;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 34%;
+  padding: 16px 33%;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    width: 50%;
+  }
+}
+.header__search-box {
+  width: 88%;
+  padding: 10px 35px 10px 15px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+.header__form {
+  display: flex;
+  flex-direction: row;
+  width: 87%;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+.header__search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.header__search-button img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__avatar {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+.header__upload-btn {
+  width: 100%;
+  margin: 16px 0px;
+  padding: 8px 0px;
+  text-align: center;
+  position: relative;
+  font-family: "AvenirReg";
+  font-size: 18px;
+  background-color: #0095FF;
+  border: none;
+  border-radius: 4px;
+  color: #FFF;
+}
+.header__upload-btn-icon {
+  position: absolute;
+  left: 8px;
+  height: calc(100% - 16px);
+}/*# sourceMappingURL=Header.css.map */

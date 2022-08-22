@@ -1,0 +1,16 @@
+//put stuff here 
+@font-face {
+    font-family: AvenirBold;
+    src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf'),
+         url('../../assets/fonts/AvenirNextLTProBold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: AvenirReg;
+    src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf'),
+         url('../../assets/fonts/AvenirNextLTPro.ttf');
+    font-weight:400;
+}
+
+$fontBold: "AvenirBold";
+$fontReg: "AvenirReg";

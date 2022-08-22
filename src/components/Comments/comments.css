@@ -1,0 +1,327 @@
+@font-face {
+  font-family: AvenirBold;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: AvenirReg;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"), url("../../assets/fonts/AvenirNextLTPro.ttf");
+  font-weight: 400;
+}
+.comment {
+  flex: auto;
+}
+.comment__main {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .comment__main {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__main {
+    padding: 0rem 7.5rem 0rem 7.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__main {
+    padding: 0rem 20rem 0rem 20rem;
+  }
+}
+.comment__number-of-comments {
+  margin: 24px 0 0 0;
+}
+.comment__title {
+  width: 100%;
+  margin-left: 15%;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  padding: 24px 0 0 0;
+}
+@media (max-width: 768px) {
+  .comment__title {
+    font-size: 12px;
+    font-family: "AvenirBold";
+    font-weight: 700;
+  }
+}
+@media (min-width: 768px) {
+  .comment__title {
+    margin: 2.25rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comment__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    font-family: "AvenirBold";
+  }
+}
+@media (min-width: 1280px) {
+  .comment__title {
+    margin: 2.25rem 10rem 2.25rem 10rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .comment__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    font-family: "AvenirBold";
+  }
+}
+.comment__form {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .comment__form {
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__form {
+    padding-bottom: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .comment__label {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #AFAFAF;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comment__label {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    font-family: "AvenirBold";
+    color: #AFAFAF;
+  }
+}
+.comment__comment-btn-icon {
+  position: absolute;
+  left: 8px;
+  height: calc(100% - 16px);
+}
+.comment__button {
+  background-color: #0095FF;
+  color: #FFF;
+  position: relative;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  font-family: "AvenirReg";
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .comment__button {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .comment__button {
+    width: 35%;
+    float: right;
+  }
+}
+.comment__button:hover {
+  background-color: #000;
+}
+.comment__name {
+  font-family: "AvenirReg";
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
+}
+@media (max-width: 768px) {
+  .comment__name {
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__name {
+    height: 3rem;
+    border-radius: 0.25rem;
+    border-color: #E1E1E1;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+}
+.comment__textentry {
+  font-family: "AvenirReg";
+  background-color: #FAFAFA;
+}
+@media (max-width: 768px) {
+  .comment__textentry {
+    height: 150px;
+    border-radius: 0.25rem;
+    border-color: #E1E1E1;
+    width: calc(100% - 0.75rem);
+    padding: 0.75rem 0 0 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    resize: none;
+  }
+}
+@media (min-width: 768px) {
+  .comment__textentry {
+    height: 9.375rem;
+    border-radius: 0.25rem;
+    border-color: #E1E1E1;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+}
+.comment__add {
+  display: flex;
+  flex: 1;
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media (max-width: 768px) {
+  .comment__avatar {
+    width: 15%;
+  }
+}
+@media (min-width: 768px) {
+  .comment__avatar {
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .comment__avatar__img {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__avatar__img {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .comment__avatar--entered {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .comment__avatar--entered {
+    padding: 0px 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+  }
+}
+.comment__avatar--container {
+  width: 15%;
+}
+.comment__metadata {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.comment__container {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #E1E1E1;
+  margin: 1rem 0 0 0;
+}
+@media (max-width: 768px) {
+  .comment__author {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: "AvenirReg";
+    width: 50%;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__author {
+    font-family: "AvenirReg";
+    width: 50%;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comment__author {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: "AvenirBold";
+  }
+}
+@media (max-width: 768px) {
+  .comment__date {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    width: 50%;
+    text-align: right;
+    color: #AFAFAF;
+    font-weight: 400;
+  }
+}
+@media (min-width: 768px) {
+  .comment__date {
+    width: 50%;
+    text-align: right;
+    color: #AFAFAF;
+    font-weight: 400 !important;
+    font-family: "AvenirReg" !important;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comment__date {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: "AvenirBold";
+  }
+}
+@media (max-width: 768px) {
+  .comment__text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .comment__text {
+    width: 100%;
+    font-family: "AvenirReg" !important;
+    font-weight: 400 !important;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comment__text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: "AvenirBold";
+  }
+}/*# sourceMappingURL=comments.css.map */
