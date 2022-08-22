@@ -3,6 +3,14 @@
 @use '../../styles/partials/colors' as *;
 
 .comment {
+    &__all {
+        @include desktop {
+            width:70%;
+            display:inline-block;
+            vertical-align:top;
+            order:5;
+        }
+    }
     //display:flex;
     flex:auto;
     &__main {
@@ -10,9 +18,9 @@
         flex-wrap:wrap;
         text-align:left;
         padding:0rem 5% 0rem 5%;
-    @include desktop {
-            padding:0rem 20rem 0rem 20rem;
-        }
+    // @include desktop {
+    //         padding:0rem 20rem 0rem 20rem;
+    //     }
     }
     &__number-of-comments {
         margin:24px 0 0 0;
@@ -34,10 +42,10 @@
                 font-weight: 700;
                 margin-left:10%;
             }
-            @include desktop {
-                margin:2.25rem 10rem 2.25rem 10rem;
-                @include tablet-desktop-section;
-            }
+            // @include desktop {
+            //     margin:2.25rem 10rem 2.25rem 10rem;
+            //     @include tablet-desktop-section;
+            // }
     }
     &__form {
         @include mobile {

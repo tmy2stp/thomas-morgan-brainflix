@@ -20,7 +20,7 @@ function comments(props) {
         </div>
     );
     return (
-        <section>
+        <section class='comment__all'>
         <section class="comment">
         <div class="comment__main">
         <h2 class="comment__number-of-comments">{props.setComments.comments.length} Comments</h2>

@@ -13,6 +13,10 @@
     @include tablet {
         align-items:center;
     }
+    @include desktop {
+        width:80%;
+        order:1;
+    }
     &__logo {
         @include mobile {
             width:34%;

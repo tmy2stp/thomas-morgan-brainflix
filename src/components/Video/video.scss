@@ -12,9 +12,17 @@
             padding-top:50.625%;
             margin:auto;
         }
+        @include desktop {
+            width:70%;
+            padding-top:39.375%;
+            margin:auto;
+        }
         &-tablet {
             width:100%;
             background-color:$black;
+            @include tablet {
+                order:2;
+            }
         }
     }
     &__player {

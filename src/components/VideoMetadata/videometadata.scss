@@ -8,6 +8,12 @@
 }
 
 .meta {
+    &__all-data {
+        @include desktop {
+            width:70%;
+            order:3;
+        }
+    }
     &__views {
         @include tablet {
             order:3;
@@ -45,12 +51,18 @@
         @include tablet {
             order:5;
         }
+        @include desktop {
+            margin:none;
+        }
     }
     &__container {
         width:90%;
         margin:auto;
         display:flex;
         flex-wrap:wrap;
+        @include desktop {
+            
+        }
     }
     &__item {
         @include mobile {
