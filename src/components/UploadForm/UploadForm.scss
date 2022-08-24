@@ -6,19 +6,43 @@
     width:90%;
     margin:auto;
     font-family:$fontReg;
+    display:flex;
+    flex-wrap:wrap;
+    gap:2%;
+    @include tablet {
+        justify-content: flex-end;
+    }
+    @include desktop {
+        width:80%;
+    }
 
     &__title {
         font-size:24px;
-
+        width:100%;
+        @include desktop{
+        }
     }
     &__form {
         color:$silver;
         display:flex;
         flex-wrap:wrap;
+        width:100%;
+        @include desktop {
+            width:60%;
+        }
     }
     &__margin {
         border-top:2px solid $mercury;
         width:100%;
+        &-tablet {
+            display:none;
+            @include tablet {
+                border-top:2px solid $mercury;
+                width:100%;
+                margin:0px 0 24px 0;
+                display:block;
+            }
+        }
     }
     &__label {
         text-transform: uppercase;
@@ -49,6 +73,14 @@
         width:100%;
         border-radius:4px;
         padding:16px 0 24px 0;
+        @include tablet {
+            width:50%;
+            margin-right:50%;
+        }
+        @include desktop {
+            width:38%;
+            margin-right:0;
+        }
     }
     &__publish-btn {
         width:100%;
@@ -63,8 +95,10 @@
         border-radius:4px;
         color:$white;
         @include tablet {
-            order:3;
+            order:2;
             width:25%;
+        }
+        @include desktop {
         }
     }
     &__cancel-btn {
@@ -81,8 +115,10 @@
         border:none;
         border-radius:4px;
         @include tablet {
-            order:3;
+            order:1;
             width:25%;
+        }
+        @include desktop {
         }
     }
     &__btn-icon {
