@@ -1,8 +1,8 @@
+import UploadForm from '../components/UploadForm/UploadForm';
+
 function Upload() {
     return (
-        <div>
-            Upload page
-        </div>
+        <UploadForm />
     );
 }
 

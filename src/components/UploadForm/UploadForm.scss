@@ -1,0 +1,93 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/typography' as *;
+
+.upload {
+    width:90%;
+    margin:auto;
+    font-family:$fontReg;
+
+    &__title {
+        font-size:24px;
+
+    }
+    &__form {
+        color:$silver;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    &__margin {
+        border-top:2px solid $mercury;
+        width:100%;
+    }
+    &__label {
+        text-transform: uppercase;
+        color:$silver;
+        font-weight:400;
+        width:100%;
+        font-weight:600;
+    }
+    &__text-input-box {
+        width:100%;
+        margin:16px 0;
+        height:42px;
+        border:1px solid $mercury;
+        border-radius:4px;
+        font-family:$fontReg;
+        padding-left:16px;
+    }
+    &__text-input-box-large {
+        width:100%;
+        margin:16px 0 24px 0;
+        height:84px;
+        border:1px solid $mercury;
+        border-radius:4px;
+        font-family:$fontReg;
+        padding:16px 0 0 16px;
+    }
+    &__thumbnail {
+        width:100%;
+        border-radius:4px;
+        padding:16px 0 24px 0;
+    }
+    &__publish-btn {
+        width:100%;
+        margin:16px 0px;
+        padding:8px 0px;
+        text-align:center;
+        position:relative;
+        font-family:$fontReg;
+        font-size:18px;
+        background-color:$bfBlue;
+        border:none;
+        border-radius:4px;
+        color:$white;
+        @include tablet {
+            order:3;
+            width:25%;
+        }
+    }
+    &__cancel-btn {
+        width:100%;
+        margin:16px 0px;
+        padding:8px 0px;
+        text-align:center;
+        position:relative;
+        font-family:$fontReg;
+        font-size:18px;
+        background-color:$white;
+        font-weight:600;
+        color:$bfBlue;
+        border:none;
+        border-radius:4px;
+        @include tablet {
+            order:3;
+            width:25%;
+        }
+    }
+    &__btn-icon {
+        position:absolute;
+        left:8px;
+        height:calc(100% - 16px);
+    }
+}
