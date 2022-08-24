@@ -3,6 +3,7 @@ import './styles/partials/_mixins.scss'
 import './components/Header/Header.scss'
 import Header from './components/Header/Header';
 import Home from './pages/Home';
+import Upload from './pages/Upload';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {useState} from 'react';
 
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home data={data} allData={allData} setData={setData} />}></Route>
+          <Route path="/upload" element={<Upload />}></Route>
         </Routes>
       </BrowserRouter> 
     );
