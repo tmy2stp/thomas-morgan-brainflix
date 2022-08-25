@@ -25,7 +25,6 @@
         @include tablet {
             padding:24px 0;
             order:1;
-            height:32px;
         }
     }
     &__search-box {
@@ -67,6 +66,13 @@
             order:4;
         }
     }
+    &__upload-link {
+        width:100%;
+        @include tablet {
+            width:25%;
+            order:2;
+        }
+    }
     &__upload-btn {
         width:100%;
         margin:16px 0px;
@@ -81,7 +87,6 @@
         color:$white;
         @include tablet {
             order:3;
-            width:25%;
         }
     }
     &__upload-btn-icon {
