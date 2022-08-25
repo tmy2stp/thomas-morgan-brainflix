@@ -1,6 +1,7 @@
 import './UploadForm.scss';
 import videoThumbnail from '../../assets/images/Upload-video-preview.jpg';
 import publishBtn from '../../assets/icons/publish.svg';
+import { Link } from 'react-router-dom';
 
 function Upload() {
     return (
@@ -21,9 +22,9 @@ function Upload() {
                 <button className="upload__publish-btn">
                     <img src={publishBtn} alt="" className="upload__btn-icon" />PUBLISH
                 </button>
-                <button className="upload__cancel-btn">
+                <Link to="/" className="upload__cancel-link"><button className="upload__cancel-btn">
                     CANCEL
-                </button>
+                </button></Link>
             </div>
         </section>
     );
