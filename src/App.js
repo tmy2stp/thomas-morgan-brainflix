@@ -10,15 +10,13 @@ import {useState} from 'react';
 let videoData = require('./data/video-details.json');
 
 function App() {
-  const [data, setData] = useState(videoData[0]);
-  const [allData, setAllData] = useState(videoData);
     return (
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home data={data} allData={allData} setData={setData} />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/upload" element={<Upload />}></Route>
-          <Route path="/:id/display" element={<Home data={data} allData={allData} setData={setData} />}></Route>
+          <Route path="/:id/display" element={<Home />}></Route>
         </Routes>
       </BrowserRouter> 
     );
