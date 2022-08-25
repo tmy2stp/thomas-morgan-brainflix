@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home data={data} allData={allData} setData={setData} />}></Route>
           <Route path="/upload" element={<Upload />}></Route>
+          <Route path="/:id/display" element={<Home data={data} allData={allData} setData={setData} />}></Route>
         </Routes>
       </BrowserRouter> 
     );
