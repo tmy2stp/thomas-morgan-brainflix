@@ -3,30 +3,36 @@
 @use '../../styles/partials/colors' as *;
 
 .header {
-    font-family:$fontReg;
-    display:flex;
-    flex-wrap:wrap;
-    width:90%;
-    margin:auto;
-    gap:2%;
+    font-family: $fontReg;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    gap: 2%;
     justify-content: space-between;
+
     @include tablet {
-        align-items:center;
+        align-items: center;
     }
+
     @include desktop {
-        width:80%;
-        order:1;
+        width: 80%;
+        order: 1;
     }
+
     &__logo {
         @include mobile {
-            width:34%;
+            width: 34%;
         }
+
         padding:16px 33%;
+
         @include tablet {
-            padding:24px 0;
-            order:1;
+            padding: 24px 0;
+            order: 1;
         }
     }
+
     &__search-box {
         width: 88%;
         padding: 10px 35px 10px 15px;
@@ -34,64 +40,75 @@
         border-radius: 4px;
         outline: none;
     }
+
     &__form {
-        display:flex;
-        flex-direction:row;
-        width:87%;
-        border:1px solid $mercury;
-        border-radius:4px;
+        display: flex;
+        flex-direction: row;
+        width: 87%;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+
         @include tablet {
-            width:25%;
-            order:2;
-            height:40px;
+            width: 25%;
+            order: 2;
+            height: 40px;
         }
     }
+
     &__search-button {
         background: transparent;
         border: none;
         outline: none;
     }
+
     &__search-button img {
         width: 20px;
         height: 20px;
         object-fit: cover;
     }
+
     &__avatar {
-        border-radius:50%;
-        height:36px;
-        width:36px;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+
         @include tablet {
-            height:40px;
-            width:40px;
-            order:4;
+            height: 40px;
+            width: 40px;
+            order: 4;
         }
     }
+
     &__upload-link {
-        width:100%;
+        width: 100%;
+
         @include tablet {
-            width:25%;
-            order:2;
+            width: 25%;
+            order: 2;
         }
     }
+
     &__upload-btn {
-        width:100%;
-        margin:16px 0px;
-        padding:8px 0px;
-        text-align:center;
-        position:relative;
-        font-family:$fontReg;
-        font-size:18px;
-        background-color:$bfBlue;
-        border:none;
-        border-radius:4px;
-        color:$white;
+        width: 100%;
+        margin: 16px 0px;
+        padding: 8px 0px;
+        text-align: center;
+        position: relative;
+        font-family: $fontReg;
+        font-size: 18px;
+        background-color: $bfBlue;
+        border: none;
+        border-radius: 4px;
+        color: $white;
+
         @include tablet {
-            order:3;
+            order: 3;
         }
     }
+
     &__upload-btn-icon {
-        position:absolute;
-        left:8px;
-        height:calc(100% - 16px);
+        position: absolute;
+        left: 8px;
+        height: calc(100% - 16px);
     }
 }

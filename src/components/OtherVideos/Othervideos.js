@@ -1,8 +1,8 @@
 import './Othervideos.scss';
 
 function OtherVideos(props) {
-    let idToExclude = props.otherVideoData[0].data.id;
-    let spanArray = props.otherVideoData[0].allData.filter(e => e.id != idToExclude).map((element,i) => 
+    let idToExclude = props.otherVideoData[0].id;
+    let spanArray = props.otherVideoData[1].filter(e => e.id != idToExclude).map((element,i) => 
         <div key= {element.id} className='otherVideos__container' onClick={() => props.otherVideoData[0].setData(element)}>
             <div className='otherVideos__thumbnail-container'>
                 <img className='otherVideos__thumbnail' src={element.image} />
