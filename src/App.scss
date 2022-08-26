@@ -2,19 +2,21 @@
 
 .App {
   text-align: center;
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
+
   &__div {
-    order:3;
+    order: 3;
   }
 }
+
 .metadata__desktop-only {
   @include desktop {
-    display:inline-flex;
-    flex-wrap:wrap;
-    order:3;
-    width:80%;
-    margin:auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    order: 3;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -48,6 +50,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
