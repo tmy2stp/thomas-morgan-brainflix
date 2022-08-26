@@ -1,4 +1,11 @@
 @use './styles/partials/mixins' as *;
+@use './styles/partials/typography' as *;
+
+body {
+  font-family:$fontReg;
+  margin:0;
+  padding:0;
+}
 
 .App {
   text-align: center;
