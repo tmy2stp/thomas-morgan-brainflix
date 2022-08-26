@@ -1,6 +1,6 @@
 import Video from '../components/Video/Video';
 import Comments from '../components/Comments/Comments';
-import OtherVideos from '../components/OtherVideos/Othervideos';
+import OtherVideos from '../components/OtherVideos/OtherVideos';
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
@@ -20,7 +20,7 @@ function Home() {
     }, [])
 
     useEffect(() => { 
-      if (allData == null) {
+      if (!allData) {
         return;
        }
        let urlToCall = API_ALL_VIDEO_URL;
@@ -34,7 +34,7 @@ function Home() {
        .then(response => {
          setData(response.data);
        });
-    }, [allData])
+    }, [allData, id])
 
     return (
     <div className="App">
