@@ -1,0 +1,12 @@
+.publish {
+    &__form {
+        color: $silver;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include desktop {
+            width: 60%;
+        }
+    }
+}
