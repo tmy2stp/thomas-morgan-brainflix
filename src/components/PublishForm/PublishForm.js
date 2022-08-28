@@ -1,3 +1,4 @@
+import './PublishForm.scss';
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -23,7 +24,7 @@ const PublishForm = () => {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="publish__form" onSubmit={handleSubmit(onSubmit)}>
             <label className="upload__label">Title your video</label>
             <input type="text" id="form__title" className="upload__text-input-box" placeholder="Add a title to your video"></input>
             <label className="upload__label">Add a video description</label>
