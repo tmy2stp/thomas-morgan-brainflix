@@ -12,7 +12,7 @@ const PublishForm = () => {
     const navigate = useNavigate();
     const sleep = ms => new Promise(
         resolve => setTimeout(resolve, ms)
-      );
+    );
 
     const onSubmit = async (data, e) => {
         e.preventDefault();

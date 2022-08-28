@@ -25,11 +25,11 @@
         height: 10vh;
         padding: 0 0 16px 0;
         text-decoration: none;
-        color:$bfBlack;
+        color: $bfBlack;
 
         @include tablet {
             max-width: 40%;
-            margin-right: 40%; // forces flex items to next row
+            margin-right: 40%; 
         }
 
         @include desktop {

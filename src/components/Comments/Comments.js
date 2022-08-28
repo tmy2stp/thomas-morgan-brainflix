@@ -1,5 +1,4 @@
 import './Comments.scss';
-import './Videometadata.scss';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import commentBtn from '../../assets/icons/add_comment.svg';
 import views from '../../assets/icons/views.svg';
