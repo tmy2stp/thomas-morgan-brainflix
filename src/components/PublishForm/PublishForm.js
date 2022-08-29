@@ -16,7 +16,6 @@ const PublishForm = () => {
 
     const onSubmit = async (data, e) => {
         e.preventDefault();
-        console.log(data);
         setMessage("Your video has been successfully published! You will now be redirect to the home page in 5 seconds");
         reset();
         await sleep(5000);
