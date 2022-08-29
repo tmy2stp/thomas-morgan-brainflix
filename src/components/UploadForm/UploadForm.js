@@ -10,7 +10,7 @@ function Upload() {
                 <h3 className="upload__title">Upload Video</h3>
                 <div className="upload__margin-tablet"></div>
                 <span className="upload__label">Video Thumbnail</span>
-                <img className="upload__thumbnail" src={videoThumbnail} alt="" />
+                <img className="upload__thumbnail" src={videoThumbnail} alt="upload thumbnail img" />
                 <PublishForm />
             </div>
         </section>

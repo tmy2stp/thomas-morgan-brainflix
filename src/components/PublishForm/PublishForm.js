@@ -1,3 +1,4 @@
+import './PublishForm.scss';
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -11,7 +12,7 @@ const PublishForm = () => {
     const navigate = useNavigate();
     const sleep = ms => new Promise(
         resolve => setTimeout(resolve, ms)
-      );
+    );
 
     const onSubmit = async (data, e) => {
         e.preventDefault();
@@ -23,7 +24,7 @@ const PublishForm = () => {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="publish__form" onSubmit={handleSubmit(onSubmit)}>
             <label className="upload__label">Title your video</label>
             <input type="text" id="form__title" className="upload__text-input-box" placeholder="Add a title to your video"></input>
             <label className="upload__label">Add a video description</label>
@@ -31,7 +32,7 @@ const PublishForm = () => {
             <div className="upload__margin-tablet"></div>
             {message}
             <button type="submit" className="upload__publish-btn">
-                <img src={publishBtn} alt="" className="upload__btn-icon" />PUBLISH
+                <img src={publishBtn} alt="publish button icon" className="upload__btn-icon" />PUBLISH
             </button>
             <Link to="/" className="upload__cancel-link"><button className="upload__cancel-btn">
                 CANCEL
