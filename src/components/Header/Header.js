@@ -9,19 +9,19 @@ const Header = () => {
 
     return (
         <header className="header">
-                <Link to="/" className="header__logo"><img src={logo} alt="" /></Link>
-                <form className='header__form'>
-                    <button type="submit" className="header__search-button">
-                        <img src={search} alt="" />
-                    </button>
-                    <input type="text" id="searchText" name="searchText" placeholder='Search' className="header__search-box" />
-                </form>
-                <img src={avatar} alt="" className="header__avatar" />
-                <Link to="/upload" className="header__upload-link">
-                    <button className="header__upload-btn">
-                        <img src={uploadBtn} alt="" className="header__upload-btn-icon" />UPLOAD
-                    </button>
-                </Link>
+            <Link to="/" className="header__logo"><img src={logo} alt="brainflix logo" /></Link>
+            <form className='header__form'>
+                <button type="submit" className="header__search-button">
+                    <img src={search} alt="search button icon" />
+                </button>
+                <input type="text" id="searchText" name="searchText" placeholder='Search' className="header__search-box" />
+            </form>
+            <img src={avatar} alt="header avatar image" className="header__avatar" />
+            <Link to="/upload" className="header__upload-link">
+                <button className="header__upload-btn">
+                    <img src={uploadBtn} alt="upload icon" className="header__upload-btn-icon" />UPLOAD
+                </button>
+            </Link>
         </header>
     )
 

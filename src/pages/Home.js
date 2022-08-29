@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const API_KEY = "?api_key=API_KEY";
+const API_KEY = "?api_key=b18812c6-4138-47eb-aba6-22a1eaf71531";
 const API_ALL_VIDEO_URL = "https://project-2-api.herokuapp.com/videos";
 
 function Home() {

@@ -32,7 +32,7 @@ const PublishForm = () => {
             <div className="upload__margin-tablet"></div>
             {message}
             <button type="submit" className="upload__publish-btn">
-                <img src={publishBtn} alt="" className="upload__btn-icon" />PUBLISH
+                <img src={publishBtn} alt="publish button icon" className="upload__btn-icon" />PUBLISH
             </button>
             <Link to="/" className="upload__cancel-link"><button className="upload__cancel-btn">
                 CANCEL
