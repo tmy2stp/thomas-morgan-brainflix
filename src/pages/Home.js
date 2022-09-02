@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const API_KEY = "?api_key=b18812c6-4138-47eb-aba6-22a1eaf71531";
-const API_ALL_VIDEO_URL = "https://project-2-api.herokuapp.com/videos";
+const API_KEY = "?api_key=test";
+const API_ALL_VIDEO_URL = "http://localhost:8000/videos";
 
 function Home() {
   const [data, setData] = useState();
@@ -38,11 +38,11 @@ function Home() {
 
   return (
     <div className="App">
-      {data && <Video setVideo={data} />}
+      {data && <Video mainVideo={data} />}
       <div className="metadata__desktop-only">
 
-        {data && <Comments setComments={data} />}
-        {data && allData && <OtherVideos otherVideoData={[data, allData, setData]} />}
+        {data && <Comments comments={data} />}
+        {data && allData && <OtherVideos data={data} allData={allData} />}
 
       </div>
     </div>
