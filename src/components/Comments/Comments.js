@@ -9,7 +9,7 @@ function formatDate(date) {
 }
 
 function comments(props) {
-    let commentSection = props.setComments.comments.map((element, i) =>
+    let commentSection = props.comments.comments.map((element, i) =>
         <div key={element.id} className='comment__container'>
             <div className='comment__avatar--container'>
                 <div className='comment__avatar--entered'></div>
@@ -24,27 +24,27 @@ function comments(props) {
     return (
         <section className='comment__all'>
             <section className='meta__all-data'>
-                <h3 className='meta__title'>{props.setComments.title}</h3>
+                <h3 className='meta__title'>{props.comments.title}</h3>
                 <div className='meta__container'>
                     <div className='meta__divider mobile-only'></div>
-                    <span className='meta__item-title'>By {props.setComments.channel}</span>
+                    <span className='meta__item-title'>By {props.comments.channel}</span>
                     <div className='meta__views meta__item'>
                         <img src={views} alt="video view icon" />
-                        <span className='meta__item-value'>{props.setComments.views}</span>
+                        <span className='meta__item-value'>{props.comments.views}</span>
                     </div>
-                    <span className='meta__item meta__date'>{formatDate(new Date(props.setComments.timestamp))}</span>
+                    <span className='meta__item meta__date'>{formatDate(new Date(props.comments.timestamp))}</span>
                     <div className='meta__item meta__likes'>
                         <img src={likes} alt="video like icon" />
-                        <span className='meta__item-value'>{props.setComments.likes}</span>
+                        <span className='meta__item-value'>{props.comments.likes}</span>
                     </div>
                     <div className='meta__divider'></div>
-                    <span className='meta__description'>{props.setComments.description}</span>
+                    <span className='meta__description'>{props.comments.description}</span>
                 </div>
 
             </section>
             <section className="comment">
                 <div className="comment__main">
-                    <h2 className="comment__number-of-comments">{props.setComments.comments.length} Comments</h2>
+                    <h2 className="comment__number-of-comments">{props.comments.comments.length} Comments</h2>
                     <h2 className="comment__title">Join the Conversation</h2>
                     <div className="comment__add">
                         <div className="comment__avatar"><img className="comment__avatar__img" src={avatar} alt="comment avatar icon" /></div>
