@@ -33,8 +33,8 @@ const PublishForm = () => {
         });
         setMessage("Your video has been successfully published! You will now be redirect to the home page in 5 seconds");
         reset();
-        //await sleep(5000);
-        //navigate("/");
+        await sleep(5000);
+        navigate("/");
     };
 
     return (
