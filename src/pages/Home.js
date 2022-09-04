@@ -23,7 +23,7 @@ function Home() {
     if (!allData) {
       return;
     }
-    let urlToCall = API_ALL_VIDEO_URL;
+    let urlToCall = "";
     if (id != null) {
       urlToCall = API_ALL_VIDEO_URL + "/" + id + API_KEY;
     }
