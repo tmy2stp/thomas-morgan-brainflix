@@ -12,7 +12,7 @@ const PublishForm = () => {
     const { handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const API_KEY = "?api_key=test";
-    const API_ALL_VIDEO_URL = "http://localhost:8000/videos";
+    const API_ALL_VIDEO_URL = (process.env.API_PORT == null) ? "http://localhost:8001/videos" : "http://localhost:8000/videos";
     const sleep = ms => new Promise(
         resolve => setTimeout(resolve, ms)
     );
