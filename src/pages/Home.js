@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const API_KEY = "?api_key=test";
-const API_ALL_VIDEO_URL = "http://localhost:8000/videos";
+const API_ALL_VIDEO_URL = (process.env.API_NODE == null) ? "http://localhost:8001/videos" : "http://localhost:8000/videos";
 
 function Home() {
   const [data, setData] = useState();
