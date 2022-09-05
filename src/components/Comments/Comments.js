@@ -11,10 +11,10 @@ function formatDate(date) {
 function comments(props) {
     let commentSection = props.comments.comments.map((element, i) =>
         <div key={element.id} className='comment__container'>
-            <div className='comment__avatar--container'>
+            <div className='comment__avatar--container' key={element.id + "_1"}>
                 <div className='comment__avatar--entered'></div>
             </div>
-            <div className='comment__metadata'>
+            <div className='comment__metadata' key={element.id + "_2"}>
                 <div className='comment__author'>{element.name}</div>
                 <div className='comment__date'>{formatDate(new Date(element.timestamp))}</div>
                 <div className='comment__text'>{element.comment}</div>
@@ -22,7 +22,7 @@ function comments(props) {
         </div>
     );
     return (
-        <section className='comment__all'>
+        <section className='comment__all' key='1'>
             <section className='meta__all-data'>
                 <h3 className='meta__title'>{props.comments.title}</h3>
                 <div className='meta__container'>
@@ -40,7 +40,6 @@ function comments(props) {
                     <div className='meta__divider'></div>
                     <span className='meta__description'>{props.comments.description}</span>
                 </div>
-
             </section>
             <section className="comment">
                 <div className="comment__main">

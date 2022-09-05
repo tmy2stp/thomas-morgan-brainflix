@@ -10,17 +10,20 @@ const API_ALL_VIDEO_URL = (process.env.API_NODE == null) ? "http://localhost:800
 
 function Home() {
   const [data, setData] = useState();
-  const [allData, setAllData] = useState();
+  const [videos, setAllData] = useState();
   let { id } = useParams();
   useEffect(() => {
     axios.get(API_ALL_VIDEO_URL + API_KEY)
       .then(response => {
         setAllData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, [])
 
   useEffect(() => {
-    if (!allData) {
+    if (!videos) {
       return;
     }
     let urlToCall = "";
@@ -28,25 +31,28 @@ function Home() {
       urlToCall = API_ALL_VIDEO_URL + "/" + id + API_KEY;
     }
     else {
-      urlToCall = API_ALL_VIDEO_URL + "/" + allData[0].id + API_KEY;
+      urlToCall = API_ALL_VIDEO_URL + "/" + videos[0].id + API_KEY;
     }
     axios.get(urlToCall)
       .then(response => {
         setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-  }, [allData, id])
+  }, [videos, id])
 
-  return (
-    <div className="App">
-      {data && <Video mainVideo={data} />}
-      <div className="metadata__desktop-only">
-
-        {data && <Comments comments={data} />}
-        {data && allData && <OtherVideos data={data} allData={allData} />}
-
+  if (data && videos) {
+    return (
+      <div className="App">
+        <Video mainVideo={data} />
+        <div className="metadata__desktop-only">
+          <Comments comments={data} />
+          <OtherVideos data={data} videos={videos} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Home;

@@ -16,7 +16,7 @@ const PublishForm = () => {
     const sleep = ms => new Promise(
         resolve => setTimeout(resolve, ms)
     );
-
+    
     const onSubmit = async (data, e) => {
         e.preventDefault();
         axios.post((API_ALL_VIDEO_URL + API_KEY), {
@@ -26,12 +26,11 @@ const PublishForm = () => {
             timestamp:Date.now()
         })
         .then(response => {
-            console.log(response);
         })
         .catch (function (error) {
             console.log(error);
         });
-        setMessage("Your video has been successfully published! You will now be redirect to the home page in 5 seconds");
+        setMessage("Your video has been successfully published! You will now be redirected to the home page in 5 seconds");
         reset();
         await sleep(5000);
         navigate("/");
@@ -41,7 +40,7 @@ const PublishForm = () => {
         <form className="publish__form" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="form__title" className="upload__label">Title your video</label>
             <input type="text" id="form__title" className="upload__text-input-box" placeholder="Add a title to your video"></input>
-            <label className="upload__label">Add a video description</label>
+            <label htmlFor="form__video-description" className="upload__label">Add a video description</label>
             <textarea id="form__video-description" className="upload__text-input-box-large" placeholder="Add a description to your video"></textarea>
             <div className="upload__margin-tablet"></div>
             {message}
